@@ -1,0 +1,340 @@
+.plugin_form_prettify_radio input[type='radio']{ height: 0; width: 0; }
+
+.plugin_form_prettify_radio  input[type='radio']  + label > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #9E9E9E;
+    border-radius: 100%;
+    cursor: pointer;  
+    transition: all 250ms cubic-bezier(.4,.0,.23,1);
+    position:relative;
+    box-sizing: content-box;
+}
+
+.plugin_form_prettify_radio input[type='radio'] + label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.plugin_form_prettify_radio input[type='radio'] + label:hover > span, .plugin_form_prettify_radio input[type='radio']:focus + label > span{
+    background: rgba(255,255,255,.1);
+}
+
+.plugin_form_prettify_radio input[type='radio']:checked + label > span {
+    border: 1px solid #FFEB3B;
+    background: orange;
+}
+
+.plugin_form_prettify_radio input[type='radio'] + label > span > dot { 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right:0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    opacity: 0;
+    border-radius: 100%;
+}
+
+.plugin_form_prettify_radio input[type='radio']:checked + label > span > dot {
+    opacity: 1;
+    width: 50%;
+    height: 50%;
+}
+
+.plugin_form_prettify_select  {
+    position: relative;
+}
+
+.plugin_form_prettify_select.opened {
+    z-index: 30;
+}
+
+.plugin_form_prettify_select > .opener {
+    cursor: pointer;
+}
+
+.plugin_form_prettify_select .options-dropdown {
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    max-height: 300px;
+    overflow: auto;
+    flex-direction: column;
+    background: white;
+    z-index: 100;
+    display: none;
+    border-radius: 5px;
+    border: 1px solid #EAEAEA;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.plugin_form_prettify_select.opened .options-dropdown {
+    display: flex;
+}
+
+
+.plugin_form_prettify_select.opened .options-dropdown > span {
+    cursor: pointer;
+}
+
+
+.plugin_form_prettify_select > .opener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 5px;
+    height: 50px;
+    border: 1px solid #EAEAEA;
+}
+
+.plugin_form_prettify_select .options-dropdown > span {
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.plugin_form_prettify_select.opened .options-dropdown > span:hover {
+    background:#f8f8f8;
+}
+.plugin_form_prettify_select > .opener > img {
+    transition: 0.1s;
+}
+.plugin_form_prettify_select.opened > .opener > img {
+    transform: rotate(180deg);
+}
+
+
+.plugin_form_prettify_checkbox input[type='checkbox']{ height: 0; width: 0; position:absolute; }
+
+.plugin_form_prettify_checkbox  input[type='checkbox']  + label > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 2px solid #9E9E9E;
+  border-radius: 2px;
+  cursor: pointer;  
+  transition: all 250ms cubic-bezier(.4,.0,.23,1);
+  position:relative;
+      box-sizing: content-box;
+}
+
+.plugin_form_prettify_checkbox input[type='checkbox'] + label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.plugin_form_prettify_checkbox input[type='checkbox'] + label:hover > span, .plugin_form_prettify_checkbox input[type='checkbox']:focus + label > span{
+  background: rgba(255,255,255,.1);
+}
+
+
+.plugin_form_prettify_checkbox input[type='checkbox']:checked + label > span{
+  border: 1px solid #FFEB3B;
+  background: orange;
+}
+
+
+.plugin_form_prettify_checkbox input[type='checkbox'] + label > span > svg { 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right:0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    width: 65%;
+    height: 65%;
+    transition: 0.1s;
+    opacity: 0;
+    object-fit: contain;
+}
+
+.plugin_form_prettify_checkbox input[type='checkbox']:checked + label > span > svg {
+  opacity: 1;
+}
+
+
+
+.plugin_form_prettify_multiselect  {
+    position: relative;
+}
+
+.plugin_form_prettify_multiselect.opened {
+    z-index: 30;
+}
+
+.plugin_form_prettify_multiselect > .opener {
+    cursor: pointer;
+}
+
+.plugin_form_prettify_multiselect .options-dropdown {
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    max-height: 300px;
+    overflow: auto;
+    flex-direction: column;
+    background: white;
+    z-index: 100;
+    display: none;
+    border-radius: 5px;
+    border: 1px solid #EAEAEA;
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+.plugin_form_prettify_multiselect.opened .options-dropdown {
+    display: flex;
+}
+
+
+.plugin_form_prettify_multiselect.opened .options-dropdown > span {
+    cursor: pointer;
+}
+
+
+.plugin_form_prettify_multiselect > .opener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 5px;
+    height: 50px;
+    border: 1px solid #EAEAEA;
+}
+
+.plugin_form_prettify_multiselect .options-dropdown > span {
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.plugin_form_prettify_multiselect.opened .options-dropdown > span:hover {
+    background:#f8f8f8;
+}
+.plugin_form_prettify_multiselect > .opener > img {
+    transition: 0.1s;
+}
+.plugin_form_prettify_multiselect.opened > .opener > img {
+    transform: rotate(180deg);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, 30px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0px, -30px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+}   
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(30px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+    }
+}
+
+@keyframes plugin_marquee{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+ @keyframes plugin_marquee_vertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.paginationjs .paginationjs-pages li > a 
+{
+    height: 30px;
+    line-height: 30px;
+}
+
+.paginationjs .paginationjs-pages li 
+{
+    border: none!important;
+}
+
+.paginationjs .paginationjs-pages ul 
+{
+    gap: 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.paginationjs .paginationjs-pages li.paginationjs-next > a, 
+.paginationjs .paginationjs-pages li.paginationjs-prev > a 
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
