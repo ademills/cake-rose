@@ -1,1 +1,7 @@
 media: assets/
+content:
+  - name: Home
+    label: Home
+    path: index.html
+    type: 
+    fields:
