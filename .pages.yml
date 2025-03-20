@@ -13,3 +13,4 @@ content:
       - { name: body, label: Body copy, type: string}
       - { name: buttonText, label: Button text, type: string}
       - { name: url, label: URL, type: string }
+      - { name: image, label: Image, type: image}
