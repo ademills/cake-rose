@@ -1,7 +1,16 @@
-media: assets/
+media: assets
 content:
   - name: Home
-    label: Home
+    label: Homepage
     path: index.html
-    type: single
+    type: file
     fields:
+    - name: hero
+      label: Hero
+      type: object
+      fields: 
+      - { name: title, label: Title, type: string }
+      - { name: body, label: Body copy, type: string}
+      - { name: buttonText, label: Button text, type: string}
+      - { name: url, label: URL, type: string }
+      - { name: image, label: Image, type: image}
